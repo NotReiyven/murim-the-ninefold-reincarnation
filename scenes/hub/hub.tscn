@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://hubscene"]
+
+[ext_resource type="Script" path="res://scenes/hub/hub.gd" id="1_hub"]
+
+[node name="Hub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_hub")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.082, 0.067, 0.055, 1)
+
+[node name="TopArea" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = 60.0
+offset_right = -60.0
+offset_top = 80.0
+offset_bottom = 400.0
+
+[node name="Title" type="Label" parent="TopArea"]
+layout_mode = 2
+text = "Murim: The Ninefold Reincarnation"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SoulFragments" type="Label" parent="TopArea"]
+layout_mode = 2
+text = "Soul Fragments: 0"
+horizontal_alignment = 1
+
+[node name="BottomBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_right = -60.0
+offset_top = -200.0
+offset_bottom = -60.0
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="BottomBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 120)
+text = "Begin Next Life"
